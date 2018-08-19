@@ -1,23 +1,22 @@
-storm_code: al142016 # find the right code at https://www.nhc.noaa.gov/gis/archive_besttrack.php?year=2018
-storm_name: "Matthew"
+storm_code: al092017 # find the right code at https://www.nhc.noaa.gov/gis/archive_besttrack.php?year=2018
+storm_name: "Harvey"
 dates:
-  start: '2016-10-06 00:00:00'
-  end: '2016-10-10 04:00:00'
-gage_states: ["FL", "GA", "SC", "NC", "VA"] # states from which to include gages
+  start: '2017-08-25'
+  end: '2017-09-02'
 
 # view, dimensions
-bbox: [-86, 21, -62, 37]
-projection: "+proj=aea +lat_1=24 +lat_2=31.5 +lat_0=24 +lon_0=-84 +x_0=400000 +y_0=0 +ellps=GRS80 +units=m +no_defs"
-height: 720
-width: 1020
+bbox: [-100, 24, -85, 34]
+projection: "+proj=laea +lat_0=45 +lon_0=-100 +x_0=0 +y_0=0 +a=6370997 +b=6370997 +units=m +no_defs"
+height: 920
+width: 1200
 
 # styling
-precip_cols: ["#FAFBF3", "#D4E9CA","#B7DAD0", "#A9B8D7", "#8F6F9E", "#41234D"]
+precip_cols: ["#FAFBF3", "#F0F8E3", "#D4E9CA", "#BBE0CE", "#B7DAD0", "#B0CCD7", "#A9B8D7", "#A297C2", "#8F6F9E", "#684A77", "#41234D"]
 precip_bin: 4 # inches per bin
 gage_flood_col: "#175676"
-
 gage_norm_col: "#4BA3C3"
 hurricane_col: "orange"
+gage_states: ["TX", "LA"] # states from which to include gages
 hurricane_cols: ["#71c633", "#f4f141", "#f47c41", "#f44141", "#d63995"]
 hurricane_col_names: ["Tropical Storm %s", "Hurricane %s (Cat1)", "Hurricane %s (Cat2)", "Hurricane %s (Cat3)", "Hurricane %s (Cat4)"] # If these change, legend layout may break
 
@@ -39,7 +38,7 @@ component_placement:
     y1: 0.01
   datetime: # above watermark for now
     x1: 0.01
-    y1: 0.2
+    y1: 0.1
   legend:
     x1:
     y1:
@@ -51,14 +50,10 @@ component_placement:
 
 ocean_name_placement:
   g_of_mex:
-    x1: 0.05
-    y1: 0.70
-  atlantic:
-    x1: 0.4
-    y1: 0.92
+    x1: 0.43
+    y1: 0.35
 ocean_name_labels:
   g_of_mex: 'Gulf of Mexico'
-  atlantic: 'Atlantic Ocean'
 
 focus_geoms:
   - # U.S. counties

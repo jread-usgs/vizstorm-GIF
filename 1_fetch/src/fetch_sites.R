@@ -31,7 +31,6 @@ fetch_sites_from_states <- function(ind_file, state_cds, dates, stream_params) {
   # Get NWS flood stage table
   nws_flood_stage_list <- jsonlite::fromJSON("https://waterwatch.usgs.gov/webservices/floodstage?format=json")
   nws_flood_stage_table <- nws_flood_stage_list[["sites"]]
-
   # Filtering applied to every storm
   sites_filtered <- sites_df %>%
     # Filter out any sites that don't have flood stage data from NWS

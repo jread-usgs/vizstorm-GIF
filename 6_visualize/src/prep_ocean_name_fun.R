@@ -14,7 +14,7 @@ prep_ocean_name_fun <- function(ocean_name_placement, ocean_name_labels){
     for (ocean in names(ocean_name_labels)){
       x <- coord_space_left + coord_width * ocean_name_placement[[ocean]]$x1
       y <- coord_space_bot + coord_height * ocean_name_placement[[ocean]]$y1
-      text(x = x, y = y, labels = ocean_name_labels[[ocean]], cex = 2, pos = 4, col = 'grey', font = 3)
+      text(x = x, y = y, labels = ocean_name_labels[[ocean]], cex = 3, pos = 4, col = 'grey', font = 3)
     }
   }
   return(plot_fun)

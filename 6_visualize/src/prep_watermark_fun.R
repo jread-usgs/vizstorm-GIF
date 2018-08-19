@@ -1,7 +1,8 @@
 
 
-prep_watermark_fun <- function(watermark_file, pos = 1){
-  if (pos != 1){
+prep_watermark_fun <- function(watermark_file, pos = c('botleft','upleft','upright','botright')){
+  pos <- match.arg(pos)
+  if (pos != 'botleft'){
     stop('the feature of positioning the watermark is not yet implemented')
   }
   plot_fun <- function(){
