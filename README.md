@@ -39,3 +39,7 @@ scmake('6_visualize/tmp/gif_TEST_frame_a_20170825_11.png', '6_storm_gif_tasks.ym
 ```
 
 iterate on style and layout in `viz_config.yml` and potentially in the `prep_fun` plotting functions to get the desired result
+then build one "real" frame and see how that looks. Later frames make more sense to test
+```r
+scmake('6_visualize/tmp/gif_frame_a_20170825_11.png', '6_storm_gif_tasks.yml')
+```
