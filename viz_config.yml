@@ -7,8 +7,8 @@ dates:
 # view, dimensions
 bbox: [-100, 24, -85, 34]
 projection: "+proj=laea +lat_0=45 +lon_0=-100 +x_0=0 +y_0=0 +a=6370997 +b=6370997 +units=m +no_defs"
-height: 920
-width: 1200
+height: 860
+width: 1100
 
 # styling
 precip_cols: ["#FAFBF3", "#F0F8E3", "#D4E9CA", "#BBE0CE", "#B7DAD0", "#B0CCD7", "#A9B8D7", "#A297C2", "#8F6F9E", "#684A77", "#41234D"]
@@ -37,13 +37,13 @@ component_placement:
   watermark_y_pos: "top"
   datetime: # above watermark for now
     x1: 0.005
-    y1: 0.85
+    y1: 0.9
   legend_x_pos: "left"
   legend_y_pos: "bottom"
   sparks:
-    xleft: 0.65 # as percentage of figure width
+    xleft: 0.7 # as percentage of figure width
     xright: 0.99 # don't use 1.0 - it causes an error (invalid value specified for graphics parameter "fig")
-    ybottom: 0.01 # as percentage of figure height
+    ybottom: 0.013 # as percentage of figure height
     ytop: 0.99 # don't use 1.0 - it causes an error (invalid value specified for graphics parameter "fig")
 
 ocean_name_placement:
