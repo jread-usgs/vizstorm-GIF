@@ -70,7 +70,9 @@ create_intro_gif_tasks <- function(intro_config, folders, storm_start_date){
         "precip_bins = precip_bins,",
         "legend_styles = legend_styles,",
         "storm_points_sf = storm_points_sf,",
-        "DateTime = I(NA))"
+        "DateTime = I(NA),",
+        "x_pos = legend_x_pos,",
+        "y_pos = legend_y_pos)"
       )
     }
   )
@@ -209,7 +211,9 @@ create_storm_gif_tasks <- function(timestep_ind, folders){
         "precip_bins = precip_bins,",
         "legend_styles = legend_styles,",
         "storm_points_sf = storm_points_sf,",
-        "DateTime = I('%s'))" = format(cur_task$timestep, "%Y-%m-%d %H:%M:%S")
+        "DateTime = I('%s')," = format(cur_task$timestep, "%Y-%m-%d %H:%M:%S"),
+        "x_pos = legend_x_pos,",
+        "y_pos = legend_y_pos)"
       )
     }
   )
@@ -265,11 +269,10 @@ create_storm_gif_tasks <- function(timestep_ind, folders){
     }
   )
 
-
   gif_task_plan <- scipiper::create_task_plan(
     task_names=tasks$task_name,
-    task_steps=list(sites_frame, point_frame, precip_frame, legend_frame,
-                    spark_frame, datetime_frame, gif_frame, gif_test_frame),
+    task_steps=list(sites_frame, point_frame, precip_frame,
+                    spark_frame, datetime_frame, legend_frame, gif_frame, gif_test_frame),
     add_complete=FALSE,
     final_steps='gif_frame',
     ind_dir=folders$log)
