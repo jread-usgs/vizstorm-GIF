@@ -33,19 +33,17 @@ frame_delay_cs: 8 # delay between frames of the gif animation. cs = centiseconds
 # Image placement for function calls of USGS watermark, legend, datetime, etc..
 #  These are fraction of the coordinate space, where 0,0 is bottom left of figure (some stuff is right justified though - legend)
 component_placement:
-  watermark:
-    x1: 0.01
-    y1: 0.01
+  watermark_x_pos: "left"
+  watermark_y_pos: "top"
   datetime: # above watermark for now
-    x1: 0.01
-    y1: 0.1
-  legend:
-    x1:
-    y1:
+    x1: 0.005
+    y1: 0.85
+  legend_x_pos: "left"
+  legend_y_pos: "bottom"
   sparks:
     xleft: 0.65 # as percentage of figure width
     xright: 0.99 # don't use 1.0 - it causes an error (invalid value specified for graphics parameter "fig")
-    ybottom: 0.22 # as percentage of figure height
+    ybottom: 0.01 # as percentage of figure height
     ytop: 0.99 # don't use 1.0 - it causes an error (invalid value specified for graphics parameter "fig")
 
 ocean_name_placement:
