@@ -63,7 +63,7 @@ prep_legend_fun <- function(precip_bins, legend_styles, storm_points_sf, DateTim
     points(dot_x, normal_y, pch = 21, bg = legend_styles$gage_norm_col, col = NA, cex = col_cex)
     text(dot_txt_x, normal_y, labels = 'Below flood stage', pos = txt_pos, cex = leg_cex)
     text(x_edge, gage_caveat_y, labels = 'USGS Stream Gages (< 1% of U.S. total)', pos = txt_pos, cex = leg_cex)
-    text(dot_txt_x, hurricane_y, labels = sprintf(hurricane_cat, legend_styles$storm_name), pos = txt_pos, cex = leg_cex)
+    text(dot_txt_x, hurricane_y, labels = "", pos = txt_pos, cex = leg_cex)
 
     h_dot_x <- dot_x
 

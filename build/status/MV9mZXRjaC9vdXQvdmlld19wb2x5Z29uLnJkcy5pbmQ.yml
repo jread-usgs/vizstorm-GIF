@@ -1,10 +1,10 @@
 version: 0.3.0
 name: 1_fetch/out/view_polygon.rds.ind
 type: file
-hash: f34114246548800e35c61bf13b1ce8d8
-time: 2018-08-20 13:11:40 UTC
+hash: af222b52b7af57cc5a2d12af4170ffb0
+time: 2018-08-21 20:45:19 UTC
 depends:
-  view_config: b42fe4c61e00b7497e38ed5a3e346abf
+  view_config: 540e0c18a1070bfe26081fd4ea46bbf7
 fixed: 844b9f5995f734b50b58b2afbd15ea5f
 code:
   functions:
