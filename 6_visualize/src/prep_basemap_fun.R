@@ -16,15 +16,11 @@ prep_basemap_fun <- function(focus_geoms_ind, secondary_geoms_ind = NULL, detail
     }
 
     focus_geoms <- readRDS(sc_retrieve(focus_geoms_ind))
-<<<<<<< HEAD
-    plot(focus_geoms, add = TRUE, col = "grey95", border = 'grey75')
-=======
     if(outline_only) {
       plot(focus_geoms, add = TRUE, col = NA, border = 'grey65')
     } else {
       plot(focus_geoms, add = TRUE, col = "grey85", border = 'grey65')
     }
->>>>>>> 93c183c1ad9828acc49207b1b3855282a8cc37c9
   }
   return(plot_fun)
 }
