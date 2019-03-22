@@ -5,6 +5,7 @@
 filter_sites_custom <- function(ind_file, sites_ind, dates) {
 
   # get sites data frame with NWS data
+<<<<<<< HEAD:2_process/src/filter_sites_custom.R
   # remove spatial component, so that joining/filtering as data will work
   sites_df <- as.data.frame(readRDS(sc_retrieve(sites_ind)))
   sites_df_notgeom <- dplyr::select(sites_df, site_no, flood_stage)
@@ -30,6 +31,12 @@ filter_sites_custom <- function(ind_file, sites_ind, dates) {
   sites_df_random <- sites_df_notgeom %>% 
     filter(!site_no %in% sites_df_flood$site_no) %>% 
     sample_n(50)
+=======
+  sites_df <- readRDS(sc_retrieve(sites_ind))
+
+  ### filter sites_df here ###
+  sites_info_subset <- sites_df
+>>>>>>> 70e91e52a5494a8c811e823e7755623077072556:2_process/src/filter_sites_custom-example.R
 
   # combine
   sites_info_subset <- full_join(sites_df_flood, sites_df_random)
