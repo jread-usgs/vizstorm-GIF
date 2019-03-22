@@ -36,7 +36,7 @@ targets:
       - 6_visualize/log/6_storm_gif_tasks.ind
       - 6_intro_gif_tasks.yml
       - 6_visualize/log/6_intro_gif_tasks.ind
-      - 6_visualize/out/animation_a.gif
+      - 6_visualize/out/animation_a.mp4
 
   # here we'll generate the components for basemap, focus_geoms, secondary_geoms,
   # adn storm_line. each of these components doesn't change over time. each
