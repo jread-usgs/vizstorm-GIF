@@ -7,6 +7,7 @@ packages:
   - dplyr
   - tidyr
   - showtext
+  - scipiper
 
 file_extensions:
   - feather
@@ -117,7 +118,7 @@ targets:
 
   precip_rasters:
     command: fetch_read('2_process/out/precip_rasters.rds.ind')
-  
+
   snow_cfg:
     command: viz_config[[I('snow_cfg')]]
   snow_rasters:
@@ -141,14 +142,14 @@ targets:
 
   intro_frame_config:
     command: viz_config[I(c('width','height'))]
-  
+
   intro_gif_tasks:
     command: create_intro_gif_tasks(
       intro_config = intro_config,
       folders = visualize_folders,
       storm_track_cfg = storm_track_cfg,
       storm_start_date = storm_start_date)
-  
+
   6_intro_gif_tasks.yml:
     command: create_intro_gif_makefile(
       makefile = target_name,

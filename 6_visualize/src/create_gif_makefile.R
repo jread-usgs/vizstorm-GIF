@@ -24,6 +24,5 @@ create_storm_gif_makefile <- function(makefile, task_plan, remake_file) {
       '6_visualize/src/prep_precip_fun.R',
       '6_visualize/src/prep_snow_fun.R',
       '6_visualize/src/prep_spark_line_fun.R'),
-    file_extensions=c('feather','ind'),
-    ind_complete=TRUE)
+    file_extensions=c('feather','ind'))
 }

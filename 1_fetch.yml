@@ -44,6 +44,7 @@ targets:
       - 1_fetch/out/waterbodies.rds.ind
       - 1_fetch/out/major_cities.rds.ind
       - 1_fetch/out/rapid_dep_sites.rds.ind
+      - 1_fetch_snow_tasks.yml
 
   # -- read config --
   viz_config:
